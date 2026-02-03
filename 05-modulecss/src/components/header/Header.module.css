@@ -1,0 +1,19 @@
+
+.header {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px 30px;
+   border-radius: 20px;
+}
+
+.btn {
+    background-color: rgb(238, 234, 228);
+    width: fit-content;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 20px;
+    border: none;
+    font-size: 1rem;
+}
