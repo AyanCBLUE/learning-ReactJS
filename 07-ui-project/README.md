@@ -1,0 +1,3 @@
+#This is a React project with tailwind CSS
+
+    This project will be getting updated more and more as I learn more......
