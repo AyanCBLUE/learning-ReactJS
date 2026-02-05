@@ -1,0 +1,13 @@
+input {
+  background-color: rgb(254, 254, 254);
+  color: rgb(176, 50, 50);
+  padding:20px;
+  margin: 10px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 20px;
+ font-size: 2rem;
+}
+
+body {
+  background-color: rgb(61, 59, 59);
+}
