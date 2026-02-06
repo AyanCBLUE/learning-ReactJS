@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(58, 58, 58);
+  color: whitesmoke;
+}
+
+button {
+  background-color: yellowgreen;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;  
+  font-size: 16px;
+  margin: 0px 25px;
+}
+
+h1 {
+  color: lightcoral;  
+  background-color: rgb(8, 108, 108);
+  padding: 20px;
+  margin: 20px;
+  width: fit-content;
+  border-radius: 15px;
+}
