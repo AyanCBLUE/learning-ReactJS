@@ -8,7 +8,9 @@ const App = () => {
 
   const submitHandler = (e)=>{
   e.preventDefault()
-  console.log(`${title} : \n${details}`);
+  if(title.trim()==='' && details.trim()===''){ alert('Write Something');
+  return;
+  }
   const copyTask = [...task]
   copyTask.push({title, details})
   setTask(copyTask)
@@ -16,6 +18,12 @@ const App = () => {
   
   setTitle('')
   setDetails('')
+  }
+
+  const deleteNote = (idx)=>{
+    const copyTask=[...task];
+    copyTask.splice(idx,1);
+    setTask(copyTask)
   }
 
   return (
@@ -56,12 +64,13 @@ const App = () => {
       <div className='flex flex-wrap gap-5 justify-start items-start my-5  h-[95%] overflow-auto'>
         
         {task.map((e,idx)=>{
-          return <div key={idx} className='text-indigo-950 h-52 w-42 bg-indigo-200 border-2 rounded-2xl overflow-auto'>
-            <div className='p-4'>
-              <h2 className='font-bold mb-2 text-xl'>{e.title}</h2>
-            <p className='leading-tight text-indigo-400'>{e.details}</p>
-            </div>
-        </div>
+        return <div key={idx} className='text-black h-52 w-42 bg-indigo-200 border-2 rounded-2xl overflow-auto flex flex-col justify-between items-start'>
+                  <div className='p-4'>
+                    <h2 className='font-bold mb-2 text-xl'>{e.title}</h2>
+                    <p className='leading-tight text-gray-600'>{e.details}</p>
+                </div>
+                <button onClick={(idx)=>{deleteNote(idx)}} className='bg-red-500 mb-2 w-fit cursor-pointer active:scale-95 rounded font-bold text-white m-auto px-8 py-1 text-xs'>Delete</button>
+              </div>
         })}
       </div>
     </div> 
