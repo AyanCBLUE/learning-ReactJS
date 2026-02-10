@@ -14,8 +14,6 @@ const App = () => {
   const copyTask = [...task]
   copyTask.push({title, details})
   setTask(copyTask)
-  console.log(copyTask);
-  
   setTitle('')
   setDetails('')
   }
